@@ -1,0 +1,33 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+/* ---- HEADER ----- */
+
+header nav { 
+    border-bottom: 1px solid black;
+}
+
+
+.navbar .navbar-brand{
+  font-family: 'Quicksand', sans-serif;
+  text-transform: capitalize;
+  
+}
+
+.nav-item a{
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 15px;
+  transition: all 0.4s;
+}
+
+.nav-item a:hover, .bi-bag:hover{
+  color: #588157;
+}
+
+
+.bi-bag,.bi-person-fill{
+   font-size: 20px;
+}
