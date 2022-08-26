@@ -1,4 +1,4 @@
-import CardWidget from '../CardWidget/CardWidget'
+import CartWidget from '../CartWidget/CartWidget'
 
 import './NavBar.css'
 
@@ -29,7 +29,7 @@ const NavBar = () => {
             <a className="nav-link" href="#"><i className="bi bi-person-fill"></i></a>
           </li>
           <li className="nav-item">
-            <CardWidget/>
+            <CartWidget/>
           </li>
         </ul>
       </div>
