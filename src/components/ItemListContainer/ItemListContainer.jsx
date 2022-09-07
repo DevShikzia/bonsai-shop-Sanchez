@@ -1,6 +1,7 @@
 import ItemCount from "../itemCount/ItemCount";
+import ItemList from "../itemList/ItemList";
 
-const ItemListContainer = ({greeting,quantity}) => {
+const ItemListContainer = ({greeting}) => {
 
     const onAdd = (quantity) => {
          if(quantity !== 0){
@@ -10,14 +11,14 @@ const ItemListContainer = ({greeting,quantity}) => {
 
  
     return (
-        <div className="d-flex justify-content-center align-items-center flex-column ">
+        <div className=" container mt-3 mb-5 justify-content-center">
         
-        <h2>{greeting}</h2>
+        {/* <h2>{greeting}</h2> */}
          
-         <ItemCount stock = {5} initial = {1} onAdd ={onAdd} />
-        
+          {/* <ItemCount stock = {5} initial = {1} onAdd ={onAdd} />  */}
+          <ItemList/>
         </div>
-
+    
     );
 
 }
