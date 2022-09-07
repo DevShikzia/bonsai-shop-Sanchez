@@ -1,5 +1,8 @@
+import { useState,useEffect } from "react";
 import ItemCount from "../itemCount/ItemCount";
 import ItemList from "../itemList/ItemList";
+import customFetch from "../../utils/customFetch";
+import dataFromBD from "../../utils/data";
 
 const ItemListContainer = ({greeting}) => {
 
@@ -9,6 +12,17 @@ const ItemListContainer = ({greeting}) => {
     }
 }
 
+const [data,setData] = useState([])
+
+useEffect(() => {
+
+    customFetch(2000,dataFromBD)
+      .then(data => setData(dataFromBD))
+      .catch(err => console.log(err));
+   
+   
+   },[])
+
  
     return (
         <div className=" container mt-3 mb-5 justify-content-center">
@@ -16,7 +30,7 @@ const ItemListContainer = ({greeting}) => {
         {/* <h2>{greeting}</h2> */}
          
           {/* <ItemCount stock = {5} initial = {1} onAdd ={onAdd} />  */}
-          <ItemList/>
+          <ItemList items = {data} />
         </div>
     
     );
