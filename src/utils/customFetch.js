@@ -1,15 +1,12 @@
 
-let is_ok = true;
+
 
 let customFetch = (time, task) => {
-    return new Promise((resolve, reject) => {
-        if (is_ok) {
-            setTimeout(() => {
-                resolve(task)
-            }, time);
-        } else {
-            reject("Error")
-        }
+    return new Promise((resolve) => {
+
+        setTimeout(() => {
+            resolve(task)
+            }, time);    
     });
 }
 
