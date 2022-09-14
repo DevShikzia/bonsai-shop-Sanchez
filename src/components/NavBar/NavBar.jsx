@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
 
 import './NavBar.css'
@@ -8,25 +9,25 @@ const NavBar = () => {
  <header>    
   <nav className="navbar navbar-expand-lg ">
     <div className="container">
-      <a className="navbar-brand" href="/">bonsai shop</a>
+      <Link className="navbar-brand" to={"/"}>bonsai shop</Link>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav m-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <a className="nav-link"  href="#">plantas</a>
+            <Link className="nav-link"  to={"/category/1"}>plantas</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">semillas</a>
+            <Link className="nav-link" to={"/category/2"}>semillas</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link " href="#" >agroquímicos</a>
+            <Link className="nav-link " to="/category/3" >agroquímicos</Link>
           </li>
         </ul>
         <ul className="navbar-nav  mb-2 mb-lg-0">
           <li className="nav-item">
-            <a className="nav-link" href="#"><i className="bi bi-person-fill"></i></a>
+            <Link className="nav-link" to={"/user"}><i className="bi bi-person-fill"></i></Link>
           </li>
           <li className="nav-item">
             <CartWidget/>

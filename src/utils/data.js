@@ -6,7 +6,8 @@ const dataFromBD = [
       price: 600,
       stock:2,
       pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/e0994ec7-1d8c-4745-adda-a677302d2d701-97ad5ab00b6ae3cbf616275063503353-320-0.jpg",
-      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos."
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 1,
     },
     {
       id: 2,
@@ -15,7 +16,8 @@ const dataFromBD = [
       price: 1234,
       stock:55,
       pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/511114_11-85d4f32dfc575549e115739200681305-640-0.jpg",
-      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos."
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 1,
     },
     {
       id: 3,
@@ -24,7 +26,8 @@ const dataFromBD = [
       price: 1300,
       stock:5,
       pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/santa-rita1-9e4d5e3b26a97cc14c15405786900966-240-0.png",
-      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos."
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 1,
     },
     {
       id: 4,
@@ -33,7 +36,8 @@ const dataFromBD = [
       price: 2040,
       stock:1,
       pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/tagetes_patula1-231b1d797678b0033516052909017011-240-0.jpg",
-      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos."
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 1,
     },
     {
       id: 5,
@@ -42,7 +46,8 @@ const dataFromBD = [
       price: 2900,
       stock:5,
       pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/copete1-6c344edee1b7d2a1b615396981462879-480-01-362266284185f45ed816002665237011-240-0.jpg",
-      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos."
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 1,
     },
     {
       id: 6,
@@ -51,7 +56,8 @@ const dataFromBD = [
       price: 1450,
       stock:45,
       pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/1608756957_0d37e63e1-60b96270c99e2af03316357815733413-240-0.jpg",
-      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos."
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 1,
     },
     {
       id: 7,
@@ -60,7 +66,8 @@ const dataFromBD = [
       price: 560,
       stock:10,
       pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/geranio-comun1-f34460d7deb34c511115889503061667-240-0.png",
-      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos."
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 1,
     },
     {
       id: 8,
@@ -69,7 +76,8 @@ const dataFromBD = [
       price: 1300,
       stock: 3,
       pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/margarita-blanca1-2c997fac1a582ad03315967356469060-240-0.jpg",
-      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos."
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 1,
     },
     {
       id: 9,
@@ -78,7 +86,108 @@ const dataFromBD = [
       price: 1234,
       stock:10,
       pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/clavelinas-plantas-con-flores-perennes-clavelinas-chinitas-d_nq_np_879690-mla25663723173_062017-f1-c006df702d489ce91915890343935454-240-0.jpg",
-      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos."
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 1,
+    },
+    {
+      id: 10,
+      title: "arándano rabbiteye",
+      dateAdded: "2014-03-01T01:35:21Z",
+      price: 2373,
+      stock:5,
+      pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/planta-frutal-de-arandanos-blueberry-vivero-suenos-del-alma-d_nq_np_929059-mla30181877078_042019-f1-15725720c2092921fd15902467843301-1024-1024.jpg",
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 2,
+    },
+    {
+      id: 11,
+      title: "lapacho rosado",
+      dateAdded: "2014-03-01T01:35:21Z",
+      price: 4130,
+      stock:6,
+      pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/lapacho-rosado21-105ee914981850768c15398846783516-1024-1024.png",
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 2,
+    },
+    {
+      id: 12,
+      title: "EUCALYPTUS CINEREA",
+      dateAdded: "2014-03-01T01:35:21Z",
+      price: 1100,
+      stock:20,
+      pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/eucalyptus_cinerea_111-fd8ebee6ee476a4ed515398836767807-1024-1024.png",
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 2,
+    },
+    {
+      id: 13,
+      title: "ACER BUERGERIANUM",
+      dateAdded: "2014-03-01T01:35:21Z",
+      price: 2000,
+      stock:30,
+      pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/acer-buergerianum1-5a08db5bab04a7307615398027304453-1024-1024.png",
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 2,
+    },
+    {
+      id: 14,
+      title: "Kiri",
+      dateAdded: "2014-03-01T01:35:21Z",
+      price: 10000,
+      stock:2,
+      pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/pre-bonsai-de-kiri-arbol-de-la-emperatriz-pawlonia-tomentosa-565121-mla20715466244_052016-f-1000x6751-d41ea3f49d493fb5ba15803049261716-1024-1024.jpg",
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 2,
+    },
+    {
+      id: 15,
+      title: "LABURNUM ANAGYROIDES",
+      dateAdded: "2014-03-01T01:35:21Z",
+      price: 1500,
+      stock:5,
+      pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/d_nq_np_637376-mlm40764850248_022020-o1-36f1acf8713be445d216549589010454-1024-1024.jpg",
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 2,
+    },
+    {
+      id: 16,
+      title: "MACETA PARIS",
+      dateAdded: "2014-03-01T01:35:21Z",
+      price: 450,
+      stock:23,
+      pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/whatsapp-image-2022-09-07-at-16-49-271-99d6be006a6231898016625802694423-1024-1024.jpeg",
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 3,
+    },
+    {
+      id: 17,
+      title: "fertilizante top crop",
+      dateAdded: "2014-03-01T01:35:21Z",
+      price: 900,
+      stock:30,
+      pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/top-crop-deeper1-06a91f10dabf35db0616189468070016-1024-1024.jpg",
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 3,
+    },
+    {
+      id: 18,
+      title: "sustrato rosales",
+      dateAdded: "2014-03-01T01:35:21Z",
+      price: 2000,
+      stock:30,
+      pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/rosales_grande-11-53e339c160102c852516581505692608-1024-1024.jpg",
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 3,
+    },
+    {
+      id: 19,
+      title: "guano",
+      dateAdded: "2014-03-01T01:35:21Z",
+      price: 600,
+      stock:7,
+      pintureURL: "https://d3ugyf2ht6aenh.cloudfront.net/stores/641/202/products/guano-de-murci-flora1-bcae3f853f197e332d16160104170188-1024-1024.jpg",
+      description: "Los colores principales son el blanco, anaranjado, purpúreo, rosado y amarillo, además de las distintas tonalidades y combinaciones de todos ellos, sobre todo entre algunos híbridos.",
+      category: 3,
     },
 
   ];

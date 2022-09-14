@@ -1,37 +1,53 @@
 import { useState,useEffect } from "react";
-import ItemCount from "../itemCount/ItemCount";
 import ItemList from "../itemList/ItemList";
 import customFetch from "../../utils/customFetch";
 import dataFromBD from "../../utils/data";
+import Spinner from "../spinner/Spinner";
+import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
 
-    const onAdd = (quantity) => {
-         if(quantity !== 0){
-             alert(`agregaste ${quantity} a tu bolsa de compra`)
-    }
-}
 
-const [data,setData] = useState([])
+const [data,setData] = useState([]);
+
+const {id} = useParams();
+
+
+ 
+
 
 useEffect(() => {
+    if (id) {
+    
+    customFetch(2000,dataFromBD.filter(product => product.category === +id))
+      .then(result => setData(result))
+      .catch(err => console.log(err))    
+    }else{
+        
+        customFetch(2000,dataFromBD)
+          .then(result => setData(result))
+          .catch(err => console.log(err))
+    }
+   
+   
+   },[id])
 
-    customFetch(2000,dataFromBD)
-      .then(data => setData(dataFromBD))
-      .catch(err => console.log(err));
-   
-   
-   },[])
+
+
 
  
     return (
+                 
+        data.length ?
+           
         <div className=" container mt-3 mb-5 justify-content-center">
+            <div className="row row-cols-1 row-cols-md-4 row-cols-lg-5 g-4 mt-3 mb-5">
         
-        {/* <h2>{greeting}</h2> */}
-         
-          {/* <ItemCount stock = {5} initial = {1} onAdd ={onAdd} />  */}
           <ItemList items = {data} />
+          </div>
         </div>
+        :
+        <Spinner/>
     
     );
 
