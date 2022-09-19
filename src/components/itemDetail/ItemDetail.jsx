@@ -1,12 +1,17 @@
+import { useState } from "react";
+import ButtonCart from "../buttonCart/ButtonCart";
 import ItemCount from "../itemCount/ItemCount";
 
 
 
 const ItemDetail = ({title,stock,description,price,img}) => {
 
+   const [itemCount,setItemCount] = useState(0);
+
     const onAdd = (quantity) => {
         if(quantity !== 0){
             alert(`agregaste ${quantity} a tu bolsa de compra`)
+            setItemCount(quantity)
    }
 }
 
@@ -26,7 +31,12 @@ const ItemDetail = ({title,stock,description,price,img}) => {
         </div>
       </div>
       <div>
-      <ItemCount initial={1} stock={stock} onAdd={onAdd}/>
+{ 
+        itemCount !== 0 ? 
+        <ButtonCart/>
+            :  
+      <ItemCount initial={itemCount} stock={stock} onAdd={onAdd}/>
+    }
       </div>                           
        </div>
   </div>

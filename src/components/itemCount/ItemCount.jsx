@@ -1,19 +1,17 @@
-import { useState } from "react";
+import {useState } from "react";
 
 const ItemCount = ({stock, initial,onAdd}) => {
 
 const [quantity, setQuantity] = useState(initial)
 
-const increment = () =>  quantity < stock ? setQuantity(quantity +1) : null;   
+
+const increment = () =>  quantity < stock && setQuantity(quantity +1) ;   
          
-const decrement = () =>  quantity > initial ? setQuantity(quantity -1) : null;
+const decrement = () =>  quantity > initial+1 && setQuantity(quantity -1);
 
 
 return (
    <> 
-    {
-     stock > 0 ? 
-
    <div className="card border-0" >
            <div className="d-flex justify-content-evenly lign-items-center mb-4">
 
@@ -21,15 +19,15 @@ return (
                         <span className="fs-4">{quantity}</span>
                    <button className={`btn bi bi-bag-plus text-success fs-3 `} onClick={increment}></button >
             </div>
-            
-      <button className={ `btn btn-dark`}  onClick={() => onAdd(quantity)}>Agregar</button>  
+            {
+              quantity !== 0 ?
+                   <button className={ `btn btn-dark`}  onClick={() => onAdd(quantity)}>Agregar</button>  
+                        :
+                   <button className={ `btn btn-dark disabled`}>Agregar</button>  
+            }
    </div>      
-             : 
-        
-             null
-   
-    }
-
+         
+ 
    </>
     );
 

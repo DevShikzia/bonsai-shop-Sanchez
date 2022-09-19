@@ -5,7 +5,7 @@ import dataFromBD from "../../utils/data";
 import ItemDetail from "../itemDetail/ItemDetail";
 import Spinner from "../spinner/Spinner";
 
-const ItemDetailContainer = ({greeting}) => {
+const ItemDetailContainer = () => {
 
 
 const [data,setData] = useState({})
