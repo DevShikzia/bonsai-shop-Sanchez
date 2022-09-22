@@ -1,17 +1,23 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 import ButtonCart from "../buttonCart/ButtonCart";
 import ItemCount from "../itemCount/ItemCount";
+import {CartContext} from "../cartContext/CartContext";
 
 
 
-const ItemDetail = ({title,stock,description,price,img}) => {
 
-   const [itemCount,setItemCount] = useState(0);
 
+
+const ItemDetail = (item) => {
+  
+  const [itemCount,setItemCount] = useState(0);
+  const {addItem} = useContext(CartContext)
+  
     const onAdd = (quantity) => {
         if(quantity !== 0){
             alert(`agregaste ${quantity} a tu bolsa de compra`)
             setItemCount(quantity)
+            addItem(item,quantity)
    }
 }
 
@@ -20,14 +26,14 @@ const ItemDetail = ({title,stock,description,price,img}) => {
 <div className="card border border-0 mb-3 mt-3">
   <div className="row justify-content-around">
     <div className="col-md-5">
-      <img src={img} className="img-fluid rounded-start" alt={`imagen de ${title}`}/>
+      <img src={item.img} className="img-fluid rounded-start" alt={`imagen de ${item.title}`}/>
     </div>
     <div className="col-md-5 d-flex flex-column text-center">
       <div className="card-body">
-        <h2 className="card-title h1 text-uppercase">{title}</h2>
+        <h2 className="card-title h1 text-uppercase">{item.title}</h2>
         <div className="mt-5">
-        <p className="card-text h3 ">${price}</p>
-        <p className="card-text pt-5 h5">Stock: {stock}</p>
+        <p className="card-text h3 ">${item.price}</p>
+        <p className="card-text pt-5 h5">Stock: {item.stock}</p>
         </div>
       </div>
       <div>
@@ -35,7 +41,7 @@ const ItemDetail = ({title,stock,description,price,img}) => {
         itemCount !== 0 ? 
         <ButtonCart/>
             :  
-      <ItemCount initial={itemCount} stock={stock} onAdd={onAdd}/>
+      <ItemCount initial={itemCount} stock={item.stock} onAdd={onAdd}/>
     }
       </div>                           
        </div>
@@ -50,7 +56,7 @@ const ItemDetail = ({title,stock,description,price,img}) => {
     </h2>
     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div className="accordion-body">
-        <p>{description}</p>
+        <p>{item.description}</p>
       </div>
     </div>
   </div>
