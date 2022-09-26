@@ -12,6 +12,7 @@ const CartContextProvider = ({ children }) => {
     if(itemFind){
         
        itemFind.quantity += quantity
+       setCartList([...cartList])
 
      }else{
         setCartList([
@@ -32,9 +33,20 @@ const CartContextProvider = ({ children }) => {
 
   const clear = () => setCartList([]);
 
+  const itemPriceTotal = (id) => {
+      const item  = cartList.find(e => e.id === id)
+      return item.quantity * item.price
+  }
+
+  const handbag = () => cartList.map(item => item.quantity).reduce((prev, curr) => prev + curr, 0)
+
+  const totalPrice = () => cartList.map(item => itemPriceTotal(item.id)).reduce((prev, curr) => prev + curr, 0)
+
+          
+
 
   return (
-    <CartContext.Provider value={{ cartList, addItem,clear,removeItem }}>
+    <CartContext.Provider value={{ cartList, addItem,clear,removeItem,itemPriceTotal,handbag,totalPrice}}>
       {children}
     </CartContext.Provider>
   );

@@ -3,6 +3,8 @@ import ButtonCart from "../buttonCart/ButtonCart";
 import ItemCount from "../itemCount/ItemCount";
 import {CartContext} from "../cartContext/CartContext";
 
+import Swal from 'sweetalert2'
+
 
 
 
@@ -15,7 +17,13 @@ const ItemDetail = (item) => {
   
     const onAdd = (quantity) => {
         if(quantity !== 0){
-            alert(`agregaste ${quantity} a tu bolsa de compra`)
+           Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: `agregaste ${quantity} a tu bolsa de compra`,
+              showConfirmButton: false,
+              timer: 1000
+            })
             setItemCount(quantity)
             addItem(item,quantity)
    }
