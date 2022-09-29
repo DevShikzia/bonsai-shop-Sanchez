@@ -1,9 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useState,useEffect } from "react";
-import customFetch from "../../utils/customFetch";
-import dataFromBD from "../../utils/data";
 import ItemDetail from "../itemDetail/ItemDetail";
 import Spinner from "../spinner/Spinner";
+import { firestoreFetchOne } from "../../utils/firestoreFetch";
 
 const ItemDetailContainer = () => {
 
@@ -16,12 +15,12 @@ const [data,setData] = useState({})
 
 useEffect(() => {
 
-    customFetch(2000,dataFromBD.find(product => product.id === +id))
+    firestoreFetchOne(id)
       .then(result => setData(result))
       .catch(err => console.log(err));
    
    
-   },[])
+   },[id])
 
  
     return (

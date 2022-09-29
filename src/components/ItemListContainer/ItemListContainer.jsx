@@ -1,9 +1,8 @@
 import { useState,useEffect } from "react";
 import ItemList from "../itemList/ItemList";
-import customFetch from "../../utils/customFetch";
-import dataFromBD from "../../utils/data";
 import Spinner from "../spinner/Spinner";
 import { useParams } from "react-router-dom";
+import {firestoreFetch} from "../../utils/firestoreFetch";
 
 const ItemListContainer = () => {
 
@@ -13,24 +12,14 @@ const [data,setData] = useState([]);
 const {id} = useParams();
 
 
- 
-
-
 useEffect(() => {
-    if (id) {
-    
-    customFetch(2000,dataFromBD.filter(product => product.category === +id))
-      .then(result => setData(result))
-      .catch(err => console.log(err))    
-    }else{
-        
-        customFetch(2000,dataFromBD)
-          .then(result => setData(result))
-          .catch(err => console.log(err))
-    }
-   
-   
-   },[id])
+      
+        firestoreFetch(id)
+        .then(result => setData(result))
+        .catch(err => console.log(err))
+      
+ 
+   },[id]);
 
 
 
