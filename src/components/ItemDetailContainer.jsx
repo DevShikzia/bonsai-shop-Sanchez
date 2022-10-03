@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useState,useEffect } from "react";
-import ItemDetail from "../itemDetail/ItemDetail";
-import Spinner from "../spinner/Spinner";
-import { firestoreFetchOne } from "../../utils/firestoreFetch";
+import ItemDetail from "./ItemDetail";
+import Spinner from "./Spinner";
+import { firestoreFetchOne } from "../utils/firestoreFetch";
 
 const ItemDetailContainer = () => {
 

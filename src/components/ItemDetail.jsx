@@ -1,7 +1,7 @@
 import { useState,useContext } from "react";
-import ButtonCart from "../buttonCart/ButtonCart";
-import ItemCount from "../itemCount/ItemCount";
-import {CartContext} from "../cartContext/CartContext";
+import ButtonCart from "./ButtonCart";
+import ItemCount from "./ItemCount";
+import {CartContext} from "./CartContext";
 
 import Swal from 'sweetalert2'
 

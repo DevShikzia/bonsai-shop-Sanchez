@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 
-import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
-import Cart from './components/cart/Cart'
-import CartContextProvider from './components/cartContext/CartContext';
+import NavBar from "./components/NavBar";
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import Cart from './components/Cart'
+import CartContextProvider from './components/CartContext';
 
 
 import './App.css';

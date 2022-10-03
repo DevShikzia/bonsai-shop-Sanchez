@@ -1,8 +1,8 @@
 import { useState,useEffect } from "react";
-import ItemList from "../itemList/ItemList";
-import Spinner from "../spinner/Spinner";
+import ItemList from "./ItemList";
+import Spinner from "./Spinner";
 import { useParams } from "react-router-dom";
-import {firestoreFetch} from "../../utils/firestoreFetch";
+import {firestoreFetch} from "../utils/firestoreFetch";
 
 const ItemListContainer = () => {
 

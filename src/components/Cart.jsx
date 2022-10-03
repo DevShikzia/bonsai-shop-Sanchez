@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import {CartContext} from "../cartContext/CartContext";
+import {CartContext} from "./CartContext";
 import { Link } from 'react-router-dom'
 import { serverTimestamp, collection, doc, setDoc, updateDoc, increment } from "firebase/firestore";
-import {db} from '../../utils/firebaseConfig'
+import {db} from '../utils/firebaseConfig'
 import Swal from "sweetalert2";
 
 const Cart = () => {

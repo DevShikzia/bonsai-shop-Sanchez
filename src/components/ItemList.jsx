@@ -1,5 +1,5 @@
 
-import Item from "../item/Item";
+import Item from "./Item";
 
 
 
