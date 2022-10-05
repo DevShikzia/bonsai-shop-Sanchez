@@ -55,8 +55,8 @@ const createOrder = async() => {
   return (
     <>
      <div className="container mt-3 mb-5 justify-content-center"> 
-        <h2>tu bolsa</h2>
-     <ol className="list-group list-group-numbered">
+        <h2>Tu bolsa</h2>
+     <ol className="list-group list-group">
         
 
         {
@@ -65,6 +65,7 @@ const createOrder = async() => {
           cartList.map(item =>
             <li className="list-group-item d-flex justify-content-between align-items-start" key={item.id}>
                 <div className="ms-2 me-auto">
+                  <img src={item.img} class="img-responsive" alt={item.title} width={50} height={50} />
                   <div className="fw-bold">{item.title}</div>
                   {item.quantity} producto(s) / $ {item.price} precio x unidad
                   <div>
@@ -77,10 +78,10 @@ const createOrder = async() => {
         
                )
               :
-              <div>
+              <li className="d-flex justify-content-center ">
               <p>tu bolsa esta vacia</p>
              <Link to={'/'}><button>Ver Catalogo</button></Link>
-              </div>
+              </li>
 
             }
                {

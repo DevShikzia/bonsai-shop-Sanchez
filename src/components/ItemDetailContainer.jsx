@@ -29,8 +29,6 @@ useEffect(() => {
       data.id ? 
         <div className=" container mt-3 mb-5 justify-content-center">
         
-         
-          {/* <ItemCount stock = {5} initial = {1} onAdd ={onAdd} />  */}
            
            <ItemDetail key={data.id}
                        id={data.id}
