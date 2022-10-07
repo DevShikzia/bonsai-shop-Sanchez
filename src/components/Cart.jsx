@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { serverTimestamp, collection, doc, setDoc, updateDoc, increment } from "firebase/firestore";
 import {db} from '../utils/firebaseConfig'
 import Swal from "sweetalert2";
+import Form from "./Form";
 
 const Cart = () => {
 
@@ -86,12 +87,16 @@ const createOrder = async() => {
             }
                {
             cartList.length > 0 && 
-            
-            <div className=" d-flex justify-content-between align-items-start">
+                <> 
+                <div className=" d-flex justify-content-between align-items-start">
                 <button onClick={clear}>Delete all</button>
-                <button onClick={createOrder}>Terminar compra</button>
+                <Form/>
                 <span className="badge bg-primary rounded-pill">TOTAL: ${totalPrice()}</span>
           </div>
+                <button onClick={createOrder}>Terminar compra</button>
+              
+                </>
+
           }
             </ol>
             
